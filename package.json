@@ -1,5 +1,5 @@
 {
-  "name": "LightVision",
+  "name": "lightvision",
   "version": "1.0.0",
   "description": "demonstration of underwater optical wireless communication",
   "main": "index.js",
