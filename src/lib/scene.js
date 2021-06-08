@@ -130,7 +130,7 @@ const water = new Mesh(
 	})
 );
 water.geometry.rotateX(-Math.PI / 2);
-water.position.y = 0.3;
+water.position.y = 5.0;
 scene.add(water);
 
 new WebXRPolyfill();
@@ -147,7 +147,7 @@ rafCallbacks.add(function (t) {
 	water.material.normalMap.offset.y += 0.01 * Math.cos(t / 8000)/sceneRadius;
 	water.material.normalScale.x = 10 * (0.8 + 0.5 * Math.cos(t / 1000));
 	water.material.normalScale.y = 10 * (0.8 + 0.5 * Math.sin(t / 1200));
-	water.position.y = 0.4 + 0.1 * Math.sin(t / 2000);
+	water.position.y = 5.0 + 0.1 * Math.sin(t / 2000);
 });
 
 renderer.setAnimationLoop(function (time) {

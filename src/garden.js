@@ -1,11 +1,11 @@
 //布景模块
 import { renderer, scene, camera, rafCallbacks, water } from "./lib/scene.js";
 // Adds locomotion
-import "./lib/controllers/controllers.js"; 
+import "./lib/controllers/controllers.js";
 
 import { InstancedFlow } from "./lib/flow.js";
 //轨迹加载模块： 从JSON中导出三组点向量数组：curves、lilyPad1、lilyPad2
-import { curves, lilyPad1, lilyPad2 } from "./lib/positions.js";  
+import { curves, lilyPad1, lilyPad2 } from "./lib/positions.js";
 //模型加载 模块
 import { models } from "./lib/meshes.js";
 //音频加载 模块
@@ -40,7 +40,7 @@ const modelsPromise = (async function () {
 	const {
 		fish: fishScene,
 		trees,
-		flotsam, 
+		flotsam,
 		lilyPad1: lilyPad1Model,
 		lilyPad2: lilyPad2Model
 	} = await models;
@@ -70,7 +70,6 @@ const modelsPromise = (async function () {
 	/******
 	  instancedFlow
 	*******/
-	
 	class Fishes extends InstancedFlow {
 
 		constructor(count, curveCount) {
@@ -80,7 +79,6 @@ const modelsPromise = (async function () {
 			super( count, curveCount, fishScene.children[0].geometry, fishScene.children[0].material );
 		}
 	}
-	
 	return { Fishes };
 
 })(); //立即执行
