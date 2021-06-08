@@ -1,7 +1,7 @@
 {
-  "name": "lightvision",
+  "name": "xrgarden",
   "version": "1.0.0",
-  "description": "demonstration of underwater optical wireless communication",
+  "description": "Garden for XR",
   "main": "index.js",
   "scripts": {
     "start": "npm run  build; node ./",

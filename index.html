@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="The demonstration of underwater optical wireless communication"/>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Light Vision</title>
+		<script src="https://cdn.jsdelivr.net/npm/resonance-audio/build/resonance-audio.min.js"></script>
+		<script type="module" src="build/garden.js"></script>
 
-        <meta property="og:title" content="Light Vision" />
-        <meta property="og:description" content="The demonstration of underwater optical wireless communication"/>
-
-        <title>Light Vision</title>
-        <script type="module" src="build/ocean.js"></script>
-        
-        <link rel="stylesheet" href="index.css" type="text/css" />
-    </head>
-
-    <body>
-        <canvas style="position: absolute;"></canvas>
-        <div id="overlay"></div>
-    </body>
+		<style>
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+			}
+			label,
+			button {
+				padding: 0.2em 0;
+				display: block;
+			}
+			#canaudio {
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 0;
+				pointer-events: none;
+			}
+			label[for="canaudio"] {
+				position: fixed;
+				bottom: 1.5rem;
+				right: 1.5rem;
+				background: #0004;
+				padding: 1.5rem;
+				border-radius: 50%;
+				border: 2px solid transparent;
+				width: 3rem;
+				height: 3rem;
+				text-align: center;
+				font-size: 0;
+				color: white;
+			}
+			#canaudio:focus + label[for="canaudio"] {
+				border: 2px solid white;
+			}
+			label[for="canaudio"]::before {
+				content: "🔇\FE0E";
+				font-size: 3rem;
+				line-height: 3rem;
+			}
+			#canaudio:checked + label[for="canaudio"]::before {
+				content: "🔊\FE0E";
+			}
+		</style>
+	</head>
+	<body>
+		<canvas style="position:aboslute;"></canvas>
+		<audio loop preload id="bgsound">
+			<source
+				src="assets/ambient/427400__imjeax__forest-ambient-loop.ogg"
+				type="audio/ogg"
+			/>
+			<source
+				src="assets/ambient/427400__imjeax__forest-ambient-loop.mp3"
+				type="audio/mpeg"
+			/>
+		</audio>
+		<script>
+			window.bgsound.volume = 0.9;
+		</script>
+		<input type="checkbox" id="canaudio" />
+		<label for="canaudio">Toggle Audio</label>
+		<div
+			style="position: fixed; right: 0; top: 0; background: #fff8"
+			id="overlay"
+		></div>
+		<img
+			src="https://adalytics-live.glitch.me/counter.png?fallback=XRGarden&color=black"
+			alt=""
+			style="vertical-align: bottom; position:absolute; top:0;"
+			aria-hidden="true"
+		/>
+	</body>
 </html>
