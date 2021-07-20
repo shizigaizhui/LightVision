@@ -7,7 +7,6 @@ async function loadModels() {
 	const { scene: trees } = await new Promise((resolve) =>
 		loader.load("./assets/forest.glb", resolve)
 	);
-	
 	const flotsam = trees.children[0];
 	flotsam.position.y = 0;
 	flotsam.material.side = BackSide;

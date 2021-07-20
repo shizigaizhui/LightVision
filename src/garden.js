@@ -39,7 +39,6 @@ const modelsPromise = (async function () {
 	//异步执行loadModels()，并做解构
 	const {
 		fish: fishScene,
-		trees,
 		flotsam,
 		lilyPad1: lilyPad1Model,
 		lilyPad2: lilyPad2Model
