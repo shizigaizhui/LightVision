@@ -1,4 +1,4 @@
-# xr-locomotion-starter
+# Light Vision
 
 Starter repo for THREE.js Locomotion
 
