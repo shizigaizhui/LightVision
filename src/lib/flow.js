@@ -207,9 +207,9 @@ export class Flow {
 
 
 
-	/******
-	  instancedFlow
-	*******/
+/******
+	 instancedFlow
+*******/
 const matrix = new Matrix4();
 export class InstancedFlow extends Flow {
 	constructor(count, curveCount, geometry, material) {

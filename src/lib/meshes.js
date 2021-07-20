@@ -35,5 +35,5 @@ async function loadModels() {
 		flotsam
 	};
 }
-
-export const models = loadModels();  //这里返回的时loadModels方法执行的结果，而不是该方法本身
+//这里返回的时loadModels方法执行的结果，而不是该方法本身
+export const models = loadModels();
